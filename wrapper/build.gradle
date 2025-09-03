@@ -68,14 +68,15 @@ dependencies {
     androidTestImplementation libs.androidx.junit
     androidTestImplementation libs.androidx.espresso.core
 }
-
-publishing {
-    publications {
-        maven(MavenPublication) {
-            groupId = 'com.github.Mocaris.ekyc'
-            artifactId = 'wrapper' // 唯一的 artifactId
-            version = '1.0.0'
-            artifact("$buildDir/outputs/aar/${project.name}-release.aar")
+afterEvaluate {
+    publishing {
+        publications {
+            maven(MavenPublication) {
+                groupId = 'com.github.Mocaris.ekyc'
+                artifactId = 'wrapper' // 唯一的 artifactId
+                version = '1.0.0'
+                artifact("$buildDir/outputs/aar/${project.name}-release.aar")
+            }
         }
     }
 }
