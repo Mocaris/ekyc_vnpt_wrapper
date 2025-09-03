@@ -42,11 +42,11 @@ android {
 }
 
 dependencies {
-    implementation files('libs/ekyc_sdk-release-v3.5.6.aar')
+//    implementation files('libs/ekyc_sdk-release-v3.5.6.aar')
 //    implementation libs.androidx.core.ktx
 //    implementation libs.androidx.appcompat
 //    implementation libs.material
-    testImplementation libs.junit
-    androidTestImplementation libs.androidx.junit
-    androidTestImplementation libs.androidx.espresso.core
+//    testImplementation libs.junit
+//    androidTestImplementation libs.androidx.junit
+//    androidTestImplementation libs.androidx.espresso.core
 }

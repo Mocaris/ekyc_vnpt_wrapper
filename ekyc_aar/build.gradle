@@ -1,0 +1,21 @@
+apply plugin: 'maven-publish'
+
+publishing {
+    publications {
+        // 发布 ekyc_sdk
+        ekycSdk(MavenPublication) {
+            groupId = 'com.github.Mocaris'
+            artifactId = 'ekyc_sdk'
+            version = '3.5.6'
+            artifact("$projectDir/libs/ekyc_sdk-release-v3.5.6.aar")
+        }
+
+        // 发布 scanqr_ic_sdk
+        scanqrIcSdk(MavenPublication) {
+            groupId = 'com.github.Mocaris'
+            artifactId = 'scanqr_ic_sdk'
+            version = '1.0.7'
+            artifact("$projectDir/libs/scanqr_ic_sdk-release-v1.0.5.aar")
+        }
+    }
+}
