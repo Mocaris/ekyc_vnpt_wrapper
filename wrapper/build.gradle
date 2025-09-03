@@ -75,7 +75,7 @@ afterEvaluate {
                 groupId = 'com.github.Mocaris.ekyc'
                 artifactId = 'wrapper' // 唯一的 artifactId
                 version = '1.0.0'
-                artifact("$buildDir/outputs/aar/${project.name}-release.aar")
+                artifact("$buildDir/outputs/aar/wrapper-release.aar")
             }
         }
     }
