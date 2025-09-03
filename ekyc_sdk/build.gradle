@@ -67,3 +67,10 @@ dependencies {
     androidTestImplementation libs.androidx.junit
     androidTestImplementation libs.androidx.espresso.core
 }
+
+// 统一依赖版本
+configurations.all {
+    resolutionStrategy {
+        force 'com.google.android.material:material:1.10.0'
+    }
+}
