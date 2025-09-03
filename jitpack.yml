@@ -1,2 +1,6 @@
-jdk:
-  - openjdk17
+android:
+  publish:
+    commands:
+      - ./gradlew clean publish
+java:
+  version: 17
