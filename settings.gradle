@@ -20,6 +20,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "ekyc_vnpt_wrapper"
-include ':ekyc_sdk'
-include ':scanqr_ic_sdk'
+include ':ekyc_sdk_assets'
+include ':scanqr_ic_sdk_assets'
 include ':ekyc_aar'
