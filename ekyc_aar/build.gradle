@@ -4,7 +4,7 @@ publishing {
     publications {
         // 发布 ekyc_sdk
         ekycSdk(MavenPublication) {
-            groupId = 'com.github.Mocaris'
+            groupId = 'com.github.Mocaris.ekyc'
             artifactId = 'ekyc_sdk'
             version = '3.5.6'
             artifact("$projectDir/libs/ekyc_sdk-release-v3.5.6.aar")
@@ -12,7 +12,7 @@ publishing {
 
         // 发布 scanqr_ic_sdk
         scanqrIcSdk(MavenPublication) {
-            groupId = 'com.github.Mocaris'
+            groupId = 'com.github.Mocaris.ekyc'
             artifactId = 'scanqr_ic_sdk'
             version = '1.0.5'
             artifact("$projectDir/libs/scanqr_ic_sdk-release-v1.0.5.aar")
