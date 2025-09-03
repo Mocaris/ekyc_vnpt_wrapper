@@ -5,7 +5,7 @@ plugins {
 apply plugin: 'maven-publish'
 
 android {
-    namespace 'com.vnpt.scanqr_ic_sdk'
+    namespace 'com.vnpt.ekyc_sdk'
     compileSdk 33
 
     defaultConfig {
@@ -44,7 +44,7 @@ android {
 
 dependencies {
 //    implementation 'com.airbnb.android:lottie:6.6.6'
-    //okhttp3
+//    //okhttp3
 //    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
 //    //With Android support
 //    implementation 'com.android.support:appcompat-v7:28.0.0'
@@ -60,8 +60,7 @@ dependencies {
 //    implementation 'com.google.code.gson:gson:2.8.2'
 //    testImplementation("org.jetbrains.kotlin:kotlin-test")
 //    testImplementation("org.mockito:mockito-core:5.0.0")
-//    implementation files('libs/scanqr_ic_sdk-release-v1.0.5.aar')
-
+//    implementation files('libs/ekyc_sdk-release-v3.5.6.aar')
 //    implementation libs.androidx.core.ktx
 //    implementation libs.androidx.appcompat
 //    implementation libs.material
@@ -74,9 +73,9 @@ publishing {
     publications {
         maven(MavenPublication) {
             groupId = 'com.github.Mocaris.ekyc'
-            artifactId = 'scanqr_ic_sdk_assets' // 唯一的 artifactId
-            version = '1.0.5'
-            artifact("$buildDir/outputs/aar/scanqr_ic_sdk-release-v1.0.5.aar")
+            artifactId = 'wrapper' // 唯一的 artifactId
+            version = '1.0.0'
+            artifact("$buildDir/outputs/aar/${project.name}-release.aar")
         }
     }
 }

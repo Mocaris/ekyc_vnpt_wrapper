@@ -1,2 +1,0 @@
--keep class ai.icenter.** { *; }
--keep class org.tensorflow.lite.** { *; }
