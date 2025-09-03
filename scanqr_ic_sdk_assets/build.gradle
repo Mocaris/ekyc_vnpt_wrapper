@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
 }
+apply plugin: 'maven-publish'
 
 android {
     namespace 'com.vnpt.scanqr_ic_sdk'
@@ -67,4 +68,15 @@ dependencies {
     testImplementation libs.junit
     androidTestImplementation libs.androidx.junit
     androidTestImplementation libs.androidx.espresso.core
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.github.Mocaris.ekyc'
+            artifactId = 'scanqr_ic_sdk_assets' // 唯一的 artifactId
+            version = '1.0.5'
+            artifact("$buildDir/outputs/aar/scanqr_ic_sdk-release-v1.0.5.aar")
+        }
+    }
 }

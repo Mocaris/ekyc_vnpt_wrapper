@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
 }
+apply plugin: 'maven-publish'
 
 android {
     namespace 'com.vnpt.ekyc_sdk'
@@ -66,4 +67,15 @@ dependencies {
     testImplementation libs.junit
     androidTestImplementation libs.androidx.junit
     androidTestImplementation libs.androidx.espresso.core
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.github.Mocaris.ekyc'
+            artifactId = 'ekyc_sdk_assets' // 唯一的 artifactId
+            version = '3.5.6'
+            artifact("$buildDir/outputs/aar/ekyc_sdk_assets-release.aar")
+        }
+    }
 }
